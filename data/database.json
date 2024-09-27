@@ -1,0 +1,10 @@
+﻿[
+    {
+        "site": "23550180",
+        "url": "https://www.siterastreio.com.br/cep/23550180",
+        "pathInput": "//input[contains(text(), '')]",
+        "pathBtn": "//div[1]/div/button",
+        "pathTag1": "/html/body/div/div[1]/main/div[2]/div[2]/div[2]/h2",
+        "pathTag2": ""
+    }
+]
