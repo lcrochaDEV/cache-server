@@ -62,12 +62,11 @@ var myHeaders = new Headers({
 });
 
 let bodyObj = {
-    site: '23550180',
-    url: 'https://www.siterastreio.com.br/cep/2355180',
-    pathInput: '//input[contains(text(), "")]',
-    pathBtn: '//div[1]/div/button',
-    pathTag: '/html/body/div/div[1]/main/div[2]/div[2]/div[2]/h2'
+    "cache":{
+                'QUALQUER OBJETO'
+            } 
 }
+
 
 let conectApi = async (url, obj) => {
     var options = {
@@ -90,14 +89,4 @@ let conectApi = async (url, obj) => {
 }
 
 conectApi('http://127.0.0.1:8000/host', bodyObj)
-```
-
-
-#### Basede dados do arquivo .json
-```json
-{
-    "id": 1,
-    "sitecode": "",
-    "end": ""
-}
 ```

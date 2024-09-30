@@ -19,26 +19,18 @@ app.add_middleware(
     max_age=3600,
 )
 
+class Itens(BaseModel):
+   cache: object = {} or str
+
+
 @app.get("/")
 def methodGet():
    return {"API está operacional"}
 
-class Itens(BaseModel):
-   cache: object = {}
-
-
-
 @app.post("/host")
 def methodPost(itens:Itens):
-      return Rotas.methodPostIdCli(itens)
+   return Rotas.methodPostIdCli(itens)
 
-'''
-@app.post("/cli")
-def methodPostIdCli(itens:Itens):
-      return Rotas.methodPostIdCli(itens)
-
-@app.post("/config")
-def methodPostIdConfig(itens:Itens):
-      return Rotas.methodPostIdConfig(itens)
-'''
-
+@app.get("/host/{itens}")
+def methodGet(itens):
+   return Rotas.methodGet(itens)

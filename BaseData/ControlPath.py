@@ -40,7 +40,6 @@ class ControlPath:
     #RECRIA PASTA E ARQUIVO SE FOREM DELETADOS
     @classmethod
     def data(self, data):
-        print(data)
         if os.path.isdir('data') == False or os.path.isfile('./data/database.json') == False:
             self.__createdir() or self.__cratefile()
 
@@ -108,6 +107,7 @@ class ControlPath:
         
     @classmethod
     def filterElement(self, item): #FILTER VERIFICA SE EXISTE DADOS NO ARRAY
+        print(item)
         fileJson = self.__readFile()
         if item != None: #FILTRA SE EXISTE ELEMENTO IGUAL NO ARRAY
             if type(item) == int or type(item) == str:

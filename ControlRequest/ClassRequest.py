@@ -11,6 +11,13 @@ class Rotas:
             return 'Erro de cadastro'
 
     @classmethod
+    def methodGet(self, data=None):
+        try:
+            return ControlPath.filterElement(data)
+        except:
+            return 'Dado não encontrado.'
+        
+    @classmethod
     def clearCache(self):
         try:
             ControlPath.delete_data()

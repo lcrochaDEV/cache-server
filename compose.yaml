@@ -1,0 +1,19 @@
+networks:
+  intranet:
+    driver: bridge
+    external: true
+    
+services:
+  fastapi-app:
+    image: fastapi_celery_example_web
+    container_name: fastapi
+    hostname: fastapi
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    restart: always
+    networks:
+      - intranet
