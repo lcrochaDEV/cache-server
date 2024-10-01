@@ -10,10 +10,13 @@ services:
     hostname: fastapi
     build:
       context: .
+      #dockerfile: Dockerfile
     volumes:
       - .:/app
+    expose:
+      - 8000
     ports:
-      - 8000:8000
+      - "8002:8000"
     restart: always
     networks:
       - intranet
