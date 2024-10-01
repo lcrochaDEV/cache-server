@@ -7,5 +7,4 @@ notas.txt
 data
 /data
 .gitignore
-Dockerfile
-.dockerignore
+
