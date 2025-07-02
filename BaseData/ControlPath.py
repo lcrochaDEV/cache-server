@@ -119,7 +119,7 @@ class ControlPath:
     ##########SECTION RANDON NUMBER##########          
     @classmethod
     def randomNumber(self):
-        nunber = self.filterElement(int((random())*1000))
-        while nunber == True:
+        number = self.filterElement(int((random())*1000))
+        while number == True:
             return int((random())*1000)
         return int((random())*1000)
